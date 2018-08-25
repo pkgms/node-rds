@@ -1,0 +1,23 @@
+{
+  "name": "@zctod/node-rds",
+  "version": "1.0.0",
+  "description": "sql model",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zc2638/node-rds.git"
+  },
+  "author": "zctod",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zc2638/node-rds/issues"
+  },
+  "homepage": "https://github.com/zc2638/node-rds",
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "pg": "^7.4.3"
+  }
+}
