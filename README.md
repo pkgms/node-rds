@@ -30,6 +30,28 @@ test.get().then(res => {
 });
 ```
 
+# Related other models
+```javascript
+class User extends Model {
+
+}
+
+class Test extends Model {
+    
+    user() {
+        return this.hasOne(new User(), 'id', 'uid');
+    }
+    users() {
+        return this.hasMany(new User(), 'id', 'uid');
+    }
+}
+
+const test = new Test();
+test.with('user').get().then(res => {
+  console.log(res);
+});
+```
+
 # API
 
 first: test.first()   
