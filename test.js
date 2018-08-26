@@ -21,6 +21,6 @@ class Test extends Model {
 }
 
 const test = new Test();
-test.with('account').get(3).then(res => {
+test.where('cid', 19).first().then(res => {
     console.log(res);
 });
