@@ -23,4 +23,8 @@ class Test extends Model {
 const test = new Test();
 test.where('cid', 19).first().then(res => {
     console.log(res);
+    res.rc_token = 111;
+    res.save(true).then(result => {
+        console.log(result);
+    });
 });
