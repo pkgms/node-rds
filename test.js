@@ -1,30 +1,20 @@
 'use strict';
 
-const Model = require('./index');
-
-class Account extends Model {
-
-    static table() {
-        return 'cst006';
-    }
-}
+const Model = require('./index').mysql;
+Model.config = function () {
+    return {
+        host: '127.0.0.1',
+        user: 'root',
+        password: '',
+        database: 'o2otest',
+    };
+};
 
 class Test extends Model {
 
-    static table() {
-        return 'cst001';
-    }
-
-    account() {
-        return this.hasOne(new Account(), 'cid', 'cid');
-    }
 }
 
 const test = new Test();
-test.where('cid', 19).first().then(res => {
+test.where('id', 19).first().then(res => {
     console.log(res);
-    res.rc_token = 111;
-    res.save(true).then(result => {
-        console.log(result);
-    });
 });

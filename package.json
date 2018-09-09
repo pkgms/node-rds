@@ -1,6 +1,6 @@
 {
   "name": "@zctod/node-rds",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "sql model",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/zctod/node-rds",
   "dependencies": {
-    "mysql": "^2.16.0",
+    "mysql2": "^1.6.1",
     "pg": "^7.4.3"
   }
 }
