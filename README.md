@@ -7,7 +7,7 @@ sql model
 # Create a model 
 test.js
 ```javascript
-const Model = require('@zctod/node-rds');
+const Model = require('@zctod/node-rds').mysql;
 class Test extends Model {
 
     static table() {
@@ -18,8 +18,8 @@ class Test extends Model {
         return {
             host: '127.0.0.1',
             user: 'root',
-            password: 'root',
-            database: 'bby',
+            password: '',
+            database: 'test',
         };
     }
 }
