@@ -6,15 +6,15 @@ Model.config = function () {
         host: '127.0.0.1',
         user: 'root',
         password: '',
-        database: 'o2otest',
+        database: 'test',
     };
 };
 
-class Test extends Model {
+class Users extends Model {}
 
-}
-
-const test = new Test();
-test.where('id', 19).first().then(res => {
+const users = new Users();
+users.create({
+    openid: new Date().valueOf(),
+}).then(res => {
     console.log(res);
 });
