@@ -6,15 +6,18 @@ Model.config = function () {
         host: '127.0.0.1',
         user: 'root',
         password: '',
-        database: 'test',
+        database: 'answer',
     };
 };
 
-class Users extends Model {}
+class User extends Model {
 
-const users = new Users();
-users.create({
-    openid: new Date().valueOf(),
-}).then(res => {
+    static isPostfix() {
+        return true;
+    }
+}
+
+const users = new User();
+users.first().then(res => {
     console.log(res);
 });
