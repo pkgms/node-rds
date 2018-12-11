@@ -1,6 +1,6 @@
 {
   "name": "@zctod/node-rds",
-  "version": "1.1.12",
+  "version": "1.1.14",
   "description": "sql model",
   "main": "index.js",
   "scripts": {
